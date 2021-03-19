@@ -1,6 +1,7 @@
 /*обратная связь*/
 .contacts-nav {
-  display: flex;
+  display: none;
+  /*display: flex;*/
   margin: 0;
   margin-left: auto;
   padding: 0;
@@ -24,8 +25,7 @@
     color: $accent-color;
     outline: none;
   }
-  }
-
+}
 
 /*иконки*/
 .contacts-nav__icon {

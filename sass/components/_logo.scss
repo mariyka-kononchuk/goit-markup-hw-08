@@ -10,9 +10,9 @@
 
   &--color {
     color: $accent-color;
-}
+  }
 
-/*тень при фокусе*/
+  /*тень при фокусе*/
   &:focus {
     outline: none;
     box-shadow: 0 0 0 2px $accent-color;

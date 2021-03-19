@@ -1,14 +1,32 @@
 /*---НАВИГАЦИЯ САЙТА---*/
 .site-nav {
-  display: flex;
-  align-items: center;
   margin: 0;
-  margin-left: 93px;
   padding: 0;
+
+  /*мобильный*/
+  @media screen and (max-width: 480px) {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: white;
+  }
+
+  /*ноут*/
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    margin-left: 93px;
+  }
 }
 
+/*ноут*/
 .site-nav__item :not(:first-child) {
-  margin-left: 50px;
+  @media screen and (min-width: 1200px) {
+    margin-left: 50px;
+  }
 }
 
 /*увеличение активной зоны для элементов меню*/
@@ -55,4 +73,29 @@
     color: $accent-color;
     outline: none;
   }
+}
+
+.site-nav__button {
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+
+  /*планшет+ноут - прячем кнопку выпадющего меню*/
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.site-nav__button .icon-close {
+  display: none;
+}
+
+.site-nav__button.is-open .icon-close {
+  display: block;
+}
+
+.site-nav__button.is-open .icon-menu {
+  display: none;
 }

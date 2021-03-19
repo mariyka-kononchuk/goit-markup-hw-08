@@ -1,6 +1,6 @@
 /*---ШАПКА---*/
 .page-header {
-  position: sticky;
+  position: relative;
 
   width: 100%;
   top: -1px;
@@ -8,22 +8,44 @@
   z-index: 100;
 
   background-color: $white-сolor;
-  border: 1px solid $header-border-color;
+  border-bottom: 1px solid $header-border-color;
 
   letter-spacing: 0.02em;
   font-size: 14px;
   line-height: 1.14;
   font-weight: 500;
+
+  /*ноут*/
+  @media screen and (min-width: 1200px) {
+    position: sticky;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    margin-left: 93px;
+  }
 }
 
 .page-header__nav {
   display: flex;
+  justify-content: space-between;
   align-items: center;
+
+  /*ноут*/
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 
 /*позиционирование элементов шапки*/
 .page-header-flex {
-  display: flex;
-  align-items: center;
-  min-height: 80px;
+  min-height: 60px;
+
+  /*ноут*/
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    align-items: center;
+    min-height: 80px;
+  }
 }

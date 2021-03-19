@@ -26,10 +26,6 @@
 /*члены команды*/
 /*сетка*/
 .team__item {
-  flex-basis: calc(100% / 4 - #{$card-set-gap});
-  margin-top: #{$card-set-gap};
-  margin-left: #{$card-set-gap};
-
   /*мобильный*/
   &:not(:last-child) {
     @media screen and (max-width: 767px) {
@@ -55,11 +51,28 @@
 /*обертка подписей и иконок соцсетей под фото*/
 .team__box {
   padding-top: #{$card-set-gap};
-  padding-bottom: #{$card-set-gap};
-  padding-left: 32px;
-  padding-right: 32px;
+  padding-bottom: 24px;
 
   background-color: $white-сolor;
+
+  /*мобильный*/
+  @media screen and (max-width: 767px) {
+    padding-left: 122px;
+    padding-right: 122px;
+  }
+
+  /*планшет*/
+  @media screen and (min-width: $tablet) {
+    padding-left: 74px;
+    padding-right: 74px;
+  }
+  /*ноут*/
+  @media screen and (min-width: $desctop) {
+    padding-top: #{$card-set-gap};
+    padding-bottom: #{$card-set-gap};
+    padding-left: 32px;
+    padding-right: 32px;
+  }
 }
 
 .team__name {

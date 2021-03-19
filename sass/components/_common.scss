@@ -27,17 +27,30 @@ body {
 
 /*секции*/
 .section {
-  padding-top: 94px;
-  padding-bottom: 94px;
   letter-spacing: 0.03em;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  /*ноут*/
+  @media screen and (min-width: $desctop) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .section__title {
   margin-top: 0;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 
   font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
+  font-size: 28px;
+  line-height: 1.179;
   text-align: center;
+
+  /*ноут*/
+  @media screen and (min-width: $desctop) {
+    margin-bottom: 50px;
+    font-size: 36px;
+    line-height: 1.17;
+  }
 }

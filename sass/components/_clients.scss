@@ -13,9 +13,18 @@
 
 /*сетка*/
 .clients__item {
-  flex-basis: calc(100% / 6 - #{$card-set-gap});
+  flex-basis: calc(100% / 2 - #{$card-set-gap});
   margin-left: #{$card-set-gap};
   margin-top: #{$card-set-gap};
+
+  /*планшет*/
+  @media screen and (min-width: $tablet) {
+    flex-basis: calc(100% / 6 - #{$card-set-gap});
+  }
+  /*ноут*/
+  @media screen and (min-width: $desctop) {
+    flex-basis: calc(100% / 3 - #{$card-set-gap});
+  }
 }
 
 .clients__link {
@@ -49,5 +58,3 @@
 .clients__icon {
   fill: currentColor;
 }
-
-

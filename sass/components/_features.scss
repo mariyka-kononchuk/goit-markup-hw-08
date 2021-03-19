@@ -20,9 +20,6 @@
 
 /*сетка*/
 .features__item {
-  margin-top: $card-set-gap;
-  margin-left: $card-set-gap;
-
   /*мобильный*/
   &:not(:last-child) {
     @media screen and (max-width: 767px) {
@@ -32,6 +29,8 @@
 
   /*планшет*/
   @media screen and (min-width: $tablet) {
+    margin-top: $card-set-gap;
+    margin-left: $card-set-gap;
     flex-basis: calc(100% / 2 - #{$card-set-gap});
   }
 
@@ -43,12 +42,28 @@
 
 /*иконки*/
 .features__icon {
-  padding: 20px 100px;
   margin-bottom: #{$card-set-gap};
-  width: 270px;
   height: 120px;
 
   background-color: $portfolio-button-background;
+
+  /*мобильный*/
+  @media screen and (max-width: 767px) {
+    padding: 25px 190px;
+    width: 450px;
+  }
+
+  /*планшет*/
+  @media screen and (min-width: $tablet) {
+    padding: 25px 142px;
+    width: 354px;
+  }
+
+  /*ноут*/
+  @media screen and (min-width: $desctop) {
+    padding: 20px 100px;
+    width: 270px;
+  }
 }
 
 /*заголовки*/
