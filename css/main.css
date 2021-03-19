@@ -605,7 +605,7 @@ body {
   padding: 0;
   margin: 0;
   text-align: left;
-  /*планшет*/
+  /*планшет и ноут*/
 }
 
 @media screen and (min-width: 768px) {
@@ -676,6 +676,12 @@ body {
 }
 
 /*---ЧЕМ ЗАНИМАЕМСЯ---*/
+@media screen and (max-width: 767px) {
+  .job {
+    display: none;
+  }
+}
+
 .job__list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -727,9 +733,20 @@ body {
       flex-wrap: wrap;
   padding: 0;
   margin: 0;
-  margin-top: calc(-1 * 30px);
-  margin-left: calc(-1 * 30px);
+  /*планшет и ноут*/
   line-height: 1.19;
+}
+
+@media screen and (min-width: 768px) {
+  .team__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-top: calc(-1 * 30px);
+    margin-left: calc(-1 * 30px);
+  }
 }
 
 /*члены команды*/
@@ -739,9 +756,32 @@ body {
       flex-basis: calc(100% / 4 - 30px);
   margin-top: 30px;
   margin-left: 30px;
+  /*мобильный*/
+  /*планшет*/
+  /*ноут*/
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
+}
+
+@media screen and (max-width: 767px) {
+  .team__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .team__item {
+    -ms-flex-preferred-size: calc(100% / 2 - 30px);
+        flex-basis: calc(100% / 2 - 30px);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .team__item {
+    -ms-flex-preferred-size: calc(100% / 4 - 30px);
+        flex-basis: calc(100% / 4 - 30px);
+  }
 }
 
 /*обертка подписей и иконок соцсетей под фото*/
