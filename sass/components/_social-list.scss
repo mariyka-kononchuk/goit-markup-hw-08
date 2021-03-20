@@ -5,6 +5,7 @@
 
   margin: 0;
   padding: 0;
+  min-width: 206px; /*мобильный*/
 
   color: $icon-color;
 }
@@ -21,8 +22,7 @@
   line-height: 0;
   border-radius: 50%;
 
-  transition: background-color 250ms $timing-fn,
-    color 250ms $timing-fn;
+  transition: background-color 250ms $timing-fn, color 250ms $timing-fn;
 
   &:hover,
   &:focus {
@@ -39,12 +39,10 @@
 
   /*другой фон ссылки на соцсеть в футере*/
   &--color {
-  background-color: $footer-icon-background;
-  color: $white-сolor;
+    background-color: $footer-icon-background;
+    color: $white-сolor;
   }
-} 
-
-
+}
 
 /*иконки соцсетей*/
 .social-list__icon {

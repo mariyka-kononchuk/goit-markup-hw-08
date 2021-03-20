@@ -483,6 +483,10 @@ body {
   width: fit-content;
   display: block;
   margin-bottom: 20px;
+  margin-left: auto;
+  /*мобильный*/
+  margin-right: auto;
+  /*мобильный*/
   color: #ffffff;
   /*тень при фокусе лого в футере*/
 }
@@ -1014,6 +1018,8 @@ body {
           justify-content: space-between;
   margin: 0;
   padding: 0;
+  min-width: 206px;
+  /*мобильный*/
   color: #afb1b8;
 }
 
@@ -1415,7 +1421,9 @@ body {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  min-height: 252px;
+  /*min-height: 252px; ноут*/
+  min-height: 603px;
+  /*мобильный*/
   background-color: #2f303a;
   color: #ffffff;
   font-style: normal;
@@ -1427,6 +1435,10 @@ body {
 .footer__title {
   display: inline-block;
   margin-bottom: 20px;
+  margin-left: auto;
+  /*мобильный*/
+  margin-right: auto;
+  /*мобильный*/
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -1447,7 +1459,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   padding-top: 60px;
-  padding-bottom: 60px;
+  /*padding-bottom: 60px; ноут*/
 }
 
 /*адрес в футере*/
@@ -1462,6 +1474,8 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin-bottom: 60px;
+  /*мобильный*/
 }
 
 .footer-address__text {
@@ -1469,7 +1483,11 @@ body {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  margin-bottom: 9px;
+  margin-bottom: 8px;
+  /*мобильный*/
+  text-align: center;
+  /*мобильный*/
+  /*margin-bottom: 9px; ноут*/
 }
 
 .footer-address__list {
@@ -1478,11 +1496,15 @@ body {
 }
 
 .footer-address__item:not(:last-child) {
-  margin-bottom: 9px;
+  margin-bottom: 8px;
+  /*мобильный*/
+  /*margin-bottom: 9px; ноут*/
 }
 
 .footer-address__contacts {
   padding: 0;
+  display: block;
+  text-align: center;
   color: rgba(255, 255, 255, 0.6);
   -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -1502,7 +1524,26 @@ body {
 
 /*--СОЦИАЛЬНЫЕ СЕТИ в футере--*/
 .footer-social {
-  margin-left: 0px;
+  /*margin-left: 0px; ноут*/
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /*мобильный*/
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  /*мобильный*/
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  /*мобильный*/
+  margin-bottom: 60px;
+  /*мобильный*/
+  margin-left: auto;
+  /*мобильный*/
+  margin-right: auto;
+  /*мобильный*/
 }
 
 /*иконки соцсетей в футере*/
@@ -1520,6 +1561,8 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   margin-left: 0px;
+  margin-bottom: 60px;
+  /*мобильный*/
 }
 
 .footer-form {
@@ -1541,7 +1584,11 @@ body {
   padding-top: 16px;
   padding-bottom: 16px;
   padding-left: 16px;
-  width: 358px;
+  margin-bottom: 20px;
+  /*мобильный*/
+  width: 450px;
+  /*мобильный*/
+  /*width: 358px; ноут*/
   color: rgba(255, 255, 255, 0.6);
   background: transparent;
   -webkit-box-sizing: border-box;
@@ -1561,6 +1608,10 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-left: auto;
+  /*мобильный*/
+  margin-right: auto;
+  /*мобильный*/
   padding: 0;
   padding-top: 10px;
   padding-bottom: 10px;
