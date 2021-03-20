@@ -25,8 +25,6 @@
   width: fit-content;
   display: block;
   margin-bottom: 20px;
-  margin-left: auto; /*мобильный*/
-  margin-right: auto; /*мобильный*/
 
   color: $white-сolor;
 
@@ -35,5 +33,11 @@
     outline: none;
     box-shadow: 0 0 0 1px $accent-color;
     border-radius: 4px;
+  }
+
+  /*мобильный+планшет*/
+  @media screen and (min-width: $mobile) and (max-width: 1199px) {
+    margin-left: auto;
+    margin-right: auto;
   }
 }

@@ -320,7 +320,6 @@ body {
 
 /*контейнер*/
 .container {
-  /*width: $width-container;*/
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
@@ -483,12 +482,9 @@ body {
   width: fit-content;
   display: block;
   margin-bottom: 20px;
-  margin-left: auto;
-  /*мобильный*/
-  margin-right: auto;
-  /*мобильный*/
   color: #ffffff;
   /*тень при фокусе лого в футере*/
+  /*мобильный+планшет*/
 }
 
 .footer__logo:focus {
@@ -496,6 +492,13 @@ body {
   -webkit-box-shadow: 0 0 0 1px #2196f3;
           box-shadow: 0 0 0 1px #2196f3;
   border-radius: 4px;
+}
+
+@media screen and (min-width: 480px) and (max-width: 1199px) {
+  .footer__logo {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 /*---НАВИГАЦИЯ САЙТА---*/
@@ -1421,29 +1424,51 @@ body {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  /*min-height: 252px; ноут*/
-  min-height: 603px;
-  /*мобильный*/
   background-color: #2f303a;
   color: #ffffff;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 1.714;
+  /*мобильный*/
+  /*планшет*/
+  /*ноут*/
+}
+
+@media screen and (min-width: 480px) {
+  .footer {
+    min-height: 603px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footer {
+    min-height: 463px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer {
+    min-height: 252px;
+  }
 }
 
 .footer__title {
   display: inline-block;
   margin-bottom: 20px;
-  margin-left: auto;
-  /*мобильный*/
-  margin-right: auto;
-  /*мобильный*/
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
   letter-spacing: 0.03em;
+  /*мобильный+планшет*/
+}
+
+@media screen and (min-width: 480px) and (max-width: 1199px) {
+  .footer__title {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 /*позиционирование контента футера*/
@@ -1451,15 +1476,71 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   padding-top: 60px;
-  /*padding-bottom: 60px; ноут*/
+  /*мобильный*/
+  /*планшет*/
+  /*ноут*/
+}
+
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  .flex-footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .flex-footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .flex-footer {
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+    padding-bottom: 60px;
+  }
+}
+
+.footer-box {
+  /*планшет*/
+  /*ноут*/
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .footer-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 60px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+  }
 }
 
 /*адрес в футере*/
@@ -1474,8 +1555,29 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-bottom: 60px;
   /*мобильный*/
+  /*планшет*/
+  /*ноут*/
+}
+
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  .footer-address {
+    margin-bottom: 60px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .footer-address {
+    margin-right: 174px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer-address {
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+  }
 }
 
 .footer-address__text {
@@ -1483,11 +1585,22 @@ body {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  margin-bottom: 8px;
-  /*мобильный*/
-  text-align: center;
-  /*мобильный*/
-  /*margin-bottom: 9px; ноут*/
+  /*мобильный+планшет*/
+  /*ноут*/
+}
+
+@media screen and (min-width: 480px) {
+  .footer-address__text {
+    margin-bottom: 8px;
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer-address__text {
+    margin-bottom: 9px;
+    text-align: left;
+  }
 }
 
 .footer-address__list {
@@ -1496,9 +1609,20 @@ body {
 }
 
 .footer-address__item:not(:last-child) {
-  margin-bottom: 8px;
   /*мобильный*/
-  /*margin-bottom: 9px; ноут*/
+  /*ноут*/
+}
+
+@media screen and (min-width: 480px) {
+  .footer-address__item:not(:last-child) {
+    margin-bottom: 8px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer-address__item:not(:last-child) {
+    margin-bottom: 9px;
+  }
 }
 
 .footer-address__contacts {
@@ -1509,6 +1633,7 @@ body {
   -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   /*тень при фокусе*/
+  /*ноут*/
 }
 
 .footer-address__contacts:focus {
@@ -1522,28 +1647,56 @@ body {
   color: #2196f3;
 }
 
+@media screen and (min-width: 1200px) {
+  .footer-address__contacts {
+    text-align: left;
+  }
+}
+
 /*--СОЦИАЛЬНЫЕ СЕТИ в футере--*/
 .footer-social {
-  /*margin-left: 0px; ноут*/
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   /*мобильный*/
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  /*мобильный*/
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  /*мобильный*/
-  margin-bottom: 60px;
-  /*мобильный*/
-  margin-left: auto;
-  /*мобильный*/
-  margin-right: auto;
-  /*мобильный*/
+  /*планшет*/
+  /*ноут*/
+}
+
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  .footer-social {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: 60px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footer-social {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer-social {
+    margin-left: 86px;
+  }
 }
 
 /*иконки соцсетей в футере*/
@@ -1560,13 +1713,40 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-left: 0px;
-  margin-bottom: 60px;
   /*мобильный*/
+  /*ноут*/
+}
+
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  .footer-sign {
+    margin-bottom: 60px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer-sign {
+    margin-left: 93px;
+  }
 }
 
 .footer-form {
+  /*планшет*/
   /*ноут*/
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .footer-form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -1579,22 +1759,33 @@ body {
 
 .footer-form__input {
   margin: 0;
-  margin-right: 12px;
   padding: 0;
   padding-top: 16px;
   padding-bottom: 16px;
   padding-left: 16px;
-  margin-bottom: 20px;
-  /*мобильный*/
-  width: 450px;
-  /*мобильный*/
-  /*width: 358px; ноут*/
   color: rgba(255, 255, 255, 0.6);
   background: transparent;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border-radius: 4px;
   border: 1px solid rgba(255, 255, 255, 0.3);
+  /*мобильный*/
+  /*ноут*/
+}
+
+@media screen and (min-width: 480px) {
+  .footer-form__input {
+    margin-bottom: 20px;
+    width: 450px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer-form__input {
+    width: 358px;
+    margin-right: 12px;
+    margin-bottom: 0px;
+  }
 }
 
 /*кнопка формы футера*/
@@ -1608,14 +1799,18 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-left: auto;
-  /*мобильный*/
-  margin-right: auto;
-  /*мобильный*/
   padding: 0;
   padding-top: 10px;
   padding-bottom: 10px;
   min-width: 200px;
+  /*мобильный*/
+}
+
+@media screen and (min-width: 480px) and (max-width: 1199px) {
+  .footer__button {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .footer-form__icon {
