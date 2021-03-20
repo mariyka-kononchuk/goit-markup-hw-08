@@ -36,6 +36,8 @@
   /*планшет*/
   @media screen and (min-width: $tablet) {
     flex-basis: calc(100% / 2 - #{$card-set-gap});
+    margin-top: $card-set-gap;
+    margin-left: $card-set-gap;
   }
 
   /*ноут*/

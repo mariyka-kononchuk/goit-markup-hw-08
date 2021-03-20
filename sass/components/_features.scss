@@ -1,6 +1,9 @@
 /*---ПЕРЕЧЕНЬ ОСОБЕННОСТЕЙ---*/
 .features {
-  padding-bottom: 0;
+  /*ноут*/
+  @media screen and (min-width: $desctop) {
+    padding-bottom: 0;
+  }
 }
 
 .features__list {
@@ -29,14 +32,16 @@
 
   /*планшет*/
   @media screen and (min-width: $tablet) {
+    flex-basis: calc(100% / 2 - #{$card-set-gap});
     margin-top: $card-set-gap;
     margin-left: $card-set-gap;
-    flex-basis: calc(100% / 2 - #{$card-set-gap});
   }
 
   /*ноут*/
   @media screen and (min-width: $desctop) {
     flex-basis: calc(100% / 4 - #{$card-set-gap});
+    margin-top: $card-set-gap;
+    margin-left: $card-set-gap;
   }
 }
 

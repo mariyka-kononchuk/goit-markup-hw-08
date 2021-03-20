@@ -652,8 +652,6 @@ body {
 .hero {
   margin-left: auto;
   margin-right: auto;
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("./../images/hero.jpg");
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("./../images/hero.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -670,6 +668,8 @@ body {
   .hero {
     max-width: 480px;
     min-height: 400px;
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("./../images/hero-mobile.jpg");
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("./../images/hero-mobile.jpg");
   }
 }
 
@@ -677,6 +677,8 @@ body {
   .hero {
     max-width: 768px;
     min-height: 400px;
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("./../images/hero-tablet.jpg");
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("./../images/hero-tablet.jpg");
   }
 }
 
@@ -684,6 +686,8 @@ body {
   .hero {
     max-width: 1600px;
     min-height: 600px;
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("./../images/hero-desctop.jpg");
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("./../images/hero-desctop.jpg");
   }
 }
 
@@ -758,7 +762,13 @@ body {
 
 /*---ПЕРЕЧЕНЬ ОСОБЕННОСТЕЙ---*/
 .features {
-  padding-bottom: 0;
+  /*ноут*/
+}
+
+@media screen and (min-width: 1200px) {
+  .features {
+    padding-bottom: 0;
+  }
 }
 
 .features__list {
@@ -795,10 +805,10 @@ body {
 
 @media screen and (min-width: 768px) {
   .features__item {
-    margin-top: 30px;
-    margin-left: 30px;
     -ms-flex-preferred-size: calc(100% / 2 - 30px);
         flex-basis: calc(100% / 2 - 30px);
+    margin-top: 30px;
+    margin-left: 30px;
   }
 }
 
@@ -806,6 +816,8 @@ body {
   .features__item {
     -ms-flex-preferred-size: calc(100% / 4 - 30px);
         flex-basis: calc(100% / 4 - 30px);
+    margin-top: 30px;
+    margin-left: 30px;
   }
 }
 
@@ -858,7 +870,7 @@ body {
 }
 
 /*---ЧЕМ ЗАНИМАЕМСЯ---*/
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1199px) {
   .job {
     display: none;
   }
@@ -952,6 +964,8 @@ body {
   .team__item {
     -ms-flex-preferred-size: calc(100% / 2 - 30px);
         flex-basis: calc(100% / 2 - 30px);
+    margin-top: 30px;
+    margin-left: 30px;
   }
 }
 
@@ -1091,15 +1105,15 @@ body {
 
 @media screen and (min-width: 768px) {
   .clients__item {
-    -ms-flex-preferred-size: calc(100% / 6 - 30px);
-        flex-basis: calc(100% / 6 - 30px);
+    -ms-flex-preferred-size: calc(100% / 3 - 30px);
+        flex-basis: calc(100% / 3 - 30px);
   }
 }
 
 @media screen and (min-width: 1200px) {
   .clients__item {
-    -ms-flex-preferred-size: calc(100% / 3 - 30px);
-        flex-basis: calc(100% / 3 - 30px);
+    -ms-flex-preferred-size: calc(100% / 6 - 30px);
+        flex-basis: calc(100% / 6 - 30px);
   }
 }
 
@@ -1951,17 +1965,47 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   margin: 0;
-  margin-bottom: 50px;
   padding: 0;
+  /*мобильный*/
+  /*планшет*/
+  /*ноут*/
+}
+
+@media screen and (min-width: 480px) {
+  .filters-list {
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+    margin-bottom: 40px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .filters-list {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .filters-list {
+    margin-bottom: 50px;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .filters-list__item {
+    margin-bottom: 15px;
+  }
 }
 
 /*расстояние между кнопками, кроме последней*/
 .filters-list__item:not(:last-child) {
   margin-right: 8px;
+  /*мобильный*/
 }
 
 .filters-list__button {
@@ -1998,24 +2042,53 @@ body {
 
 /*примеры работ - портфолио*/
 .portfolio-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   margin: 0;
   padding: 0;
-  margin-top: calc(-1 * 30px);
-  margin-left: calc(-1 * 30px);
+  /*планшет и ноут*/
+}
+
+@media screen and (min-width: 768px) {
+  .portfolio-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-top: calc(-1 * 30px);
+    margin-left: calc(-1 * 30px);
+  }
 }
 
 /*сетка*/
 .product {
-  -ms-flex-preferred-size: calc(100% / 3 - 30px);
-      flex-basis: calc(100% / 3 - 30px);
-  margin-left: 30px;
-  margin-top: 30px;
   border: 1px solid #eeeeee;
+  /*мобильный*/
+  /*планшет*/
+  /*ноут*/
+}
+
+@media screen and (max-width: 767px) {
+  .product:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .product {
+    -ms-flex-preferred-size: calc(100% / 2 - 30px);
+        flex-basis: calc(100% / 2 - 30px);
+    margin-top: 30px;
+    margin-left: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .product {
+    -ms-flex-preferred-size: calc(100% / 3 - 30px);
+        flex-basis: calc(100% / 3 - 30px);
+    margin-top: 30px;
+    margin-left: 30px;
+  }
 }
 
 /*проекты в портфолио*/
@@ -2038,6 +2111,16 @@ body {
 .product__thumb {
   position: relative;
   overflow: hidden;
+}
+
+.product__thumb img {
+  /*мобильный*/
+}
+
+@media screen and (min-width: 480px) {
+  .product__thumb img {
+    width: 100%;
+  }
 }
 
 /*всплывающий текст при ховере*/

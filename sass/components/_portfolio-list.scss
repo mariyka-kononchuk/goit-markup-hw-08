@@ -1,20 +1,41 @@
 /*примеры работ - портфолио*/
 .portfolio-list {
-  display: flex;
-  flex-wrap: wrap;
-
   margin: 0;
   padding: 0;
-  margin-top: calc(-1 * #{$card-set-gap});
-  margin-left: calc(-1 * #{$card-set-gap});
+
+  /*планшет и ноут*/
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(-1 * #{$card-set-gap});
+    margin-left: calc(-1 * #{$card-set-gap});
+  }
 }
 
 /*сетка*/
 .product {
-  flex-basis: calc(100% / 3 - #{$card-set-gap});
-  margin-left: #{$card-set-gap};
-  margin-top: #{$card-set-gap};
   border: 1px solid $portfolio-card-background;
+
+  /*мобильный*/
+  &:not(:last-child) {
+    @media screen and (max-width: 767px) {
+      margin-bottom: $card-set-gap;
+    }
+  }
+
+  /*планшет*/
+  @media screen and (min-width: $tablet) {
+    flex-basis: calc(100% / 2 - #{$card-set-gap});
+    margin-top: $card-set-gap;
+    margin-left: $card-set-gap;
+  }
+
+  /*ноут*/
+  @media screen and (min-width: $desctop) {
+    flex-basis: calc(100% / 3 - #{$card-set-gap});
+    margin-top: $card-set-gap;
+    margin-left: $card-set-gap;
+  }
 }
 
 /*проекты в портфолио*/
@@ -36,6 +57,13 @@
 .product__thumb {
   position: relative;
   overflow: hidden;
+
+  & img {
+    /*мобильный*/
+    @media screen and (min-width: $mobile) {
+      width: 100%;
+    }
+  }
 }
 
 /*всплывающий текст при ховере*/
@@ -68,7 +96,7 @@
   .product:focus & {
     opacity: 1;
     transform: translateY(-100%);
- }
+  }
 }
 
 /*обертка подписей под фото*/
@@ -97,4 +125,3 @@
   line-height: 1.88;
   letter-spacing: 0.03em;
 }
-
