@@ -13,7 +13,7 @@
   text-align: center;
 
   /*мобильный*/
-  @media screen and (min-width: 480px) {
+  @media screen and (max-width: 767px) {
     max-width: 480px;
     min-height: 400px;
     background-image: linear-gradient(

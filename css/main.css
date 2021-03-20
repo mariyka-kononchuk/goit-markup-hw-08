@@ -559,7 +559,7 @@ body {
   /*ноут*/
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 767px) {
   .site-nav {
     display: none;
     position: absolute;
@@ -665,12 +665,12 @@ body {
 
 @media screen and (min-width: 1200px) {
   .contacts-nav {
-    font-size: 14px;
-    line-height: 1.14;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    font-size: 14px;
+    line-height: 1.14;
   }
 }
 
@@ -727,7 +727,7 @@ body {
   /*ноут*/
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (max-width: 767px) {
   .hero {
     max-width: 480px;
     min-height: 400px;
@@ -1245,12 +1245,20 @@ body {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  min-width: 528px;
-  min-height: 581px;
+  min-width: 450px;
+  min-height: 609px;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   background-color: #ffffff;
+  /*ноут*/
+}
+
+@media screen and (min-width: 1200px) {
+  .modal {
+    min-width: 528px;
+    min-height: 581px;
+  }
 }
 
 /*кнопка закрытия модального окна*/
@@ -1304,10 +1312,17 @@ body {
   margin-bottom: 12px;
   font-weight: 700;
   font-size: 20px;
-  line-height: 1.15;
+  line-height: 1.5;
   text-align: center;
   letter-spacing: 0.03em;
   color: #212121;
+  /*ноут*/
+}
+
+@media screen and (min-width: 1200px) {
+  .form__title {
+    line-height: 1.15;
+  }
 }
 
 .form__field {
@@ -1395,12 +1410,22 @@ body {
   border-radius: 4px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   resize: none;
+  font-size: 14px;
+  line-height: 1.142;
+  /*ноут*/
 }
 
 .form__comment:focus {
   outline: none;
   border: 1px solid #2196f3;
   caret-color: #2196f3;
+}
+
+@media screen and (min-width: 1200px) {
+  .form__comment {
+    font-size: 12px;
+    line-height: 1.167;
+  }
 }
 
 /*соглашение на рассылку*/
@@ -1412,9 +1437,17 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   font-weight: normal;
-  font-size: 14px;
-  line-height: 1.714;
+  font-size: 12px;
+  line-height: 1.167;
   letter-spacing: 0.03em;
+  /*ноут*/
+}
+
+@media screen and (min-width: 1200px) {
+  .policy {
+    font-size: 14px;
+    line-height: 1.714;
+  }
 }
 
 .policy__field {

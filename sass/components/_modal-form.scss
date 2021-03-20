@@ -20,11 +20,16 @@
 
   font-weight: 700;
   font-size: 20px;
-  line-height: 1.15;
+  line-height: 1.5;
   text-align: center;
   letter-spacing: 0.03em;
 
   color: $primary-text-color;
+
+  /*ноут*/
+  @media screen and (min-width: $desctop) {
+    line-height: 1.15;
+  }
 }
 
 .form__field {
@@ -85,7 +90,7 @@
   transition: color 250ms $timing-fn;
 
   /*изменение цвета иконки при фокусе input*/
-  .form__input:focus ~& {
+  .form__input:focus ~ & {
     color: $accent-color;
   }
 }
@@ -100,10 +105,19 @@
 
   resize: none;
 
+  font-size: 14px;
+  line-height: 1.142;
+
   &:focus {
     outline: none;
     border: 1px solid $accent-color;
     caret-color: $accent-color;
+  }
+
+  /*ноут*/
+  @media screen and (min-width: $desctop) {
+    font-size: 12px;
+    line-height: 1.167;
   }
 }
 
@@ -113,9 +127,15 @@
   justify-content: center;
 
   font-weight: normal;
-  font-size: 14px;
-  line-height: 1.714;
+  font-size: 12px;
+  line-height: 1.167;
   letter-spacing: 0.03em;
+
+  /*ноут*/
+  @media screen and (min-width: $desctop) {
+    font-size: 14px;
+    line-height: 1.714;
+  }
 }
 
 .policy__field {
@@ -156,24 +176,24 @@
 }
 
 /*скрываем иконку чекбокса*/
-  .policy__icon--display {
-    display: none;
-  }
+.policy__icon--display {
+  display: none;
+}
 
-  /*при выборе checkbox появляется иконка*/
-  .policy__input:checked + .policy__icon use {
-    display: inline-block;
-  }
+/*при выборе checkbox появляется иконка*/
+.policy__input:checked + .policy__icon use {
+  display: inline-block;
+}
 
-  /*при выборе checkbox исчезает бордер*/
-  .policy__input:checked + .policy__icon {
-    border: none;
-  } 
-  /*при фокусе checkbox появляется бордер*/
-  .policy__input:focus+ .policy__icon {
-    border: 2px solid $accent-color;
-    border-radius: 2px;
-  }
+/*при выборе checkbox исчезает бордер*/
+.policy__input:checked + .policy__icon {
+  border: none;
+}
+/*при фокусе checkbox появляется бордер*/
+.policy__input:focus + .policy__icon {
+  border: 2px solid $accent-color;
+  border-radius: 2px;
+}
 
 .policy__link {
   margin-left: 4px;
@@ -197,4 +217,3 @@
     background-color: #188ce8;
   }
 }
-
