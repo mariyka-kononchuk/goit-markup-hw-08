@@ -732,7 +732,7 @@ body.modal-open {
   /*ноут*/
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 576px) {
   .hero {
     max-width: 480px;
     min-height: 400px;
@@ -743,14 +743,14 @@ body.modal-open {
   }
 }
 
-@media screen and (max-width: 767px) and (min-device-pixel-ratio: 2), screen and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), screen and (max-width: 767px) and (min-resolution: 192dpi), screen and (max-width: 767px) and (min-resolution: 2dppx) {
+@media screen and (max-width: 576px) and (min-device-pixel-ratio: 2), screen and (max-width: 576px) and (-webkit-min-device-pixel-ratio: 2), screen and (max-width: 576px) and (min-resolution: 192dpi), screen and (max-width: 576px) and (min-resolution: 2dppx) {
   .hero {
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("./../images/hero-mobile-2x.jpg");
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("./../images/hero-mobile-2x.jpg");
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 577px) {
   .hero {
     max-width: 768px;
     min-height: 400px;
@@ -761,14 +761,14 @@ body.modal-open {
   }
 }
 
-@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+@media screen and (min-width: 577px) and (min-device-pixel-ratio: 2), screen and (min-width: 577px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 577px) and (min-resolution: 192dpi), screen and (min-width: 577px) and (min-resolution: 2dppx) {
   .hero {
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("./../images/hero-tablet-2x.jpg");
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("./../images/hero-tablet-2x.jpg");
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 961px) {
   .hero {
     max-width: 1600px;
     min-height: 600px;
@@ -779,7 +779,7 @@ body.modal-open {
   }
 }
 
-@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+@media screen and (min-width: 961px) and (min-device-pixel-ratio: 2), screen and (min-width: 961px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 961px) and (min-resolution: 192dpi), screen and (min-width: 961px) and (min-resolution: 2dppx) {
   .hero {
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("./../images/hero-desktop-2x.jpg");
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("./../images/hero-desktop-2x.jpg");
@@ -798,7 +798,7 @@ body.modal-open {
   /*ноут*/
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (max-width: 960px) {
   .hero__title {
     font-size: 26px;
     line-height: 1.615;
@@ -806,7 +806,7 @@ body.modal-open {
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 961px) {
   .hero__title {
     font-size: 44px;
     line-height: 1.36;
@@ -821,7 +821,7 @@ body.modal-open {
   /*ноут*/
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 961px) {
   .hero__content {
     padding-top: 200px;
     padding-bottom: 200px;
