@@ -548,7 +548,7 @@ body.modal-open {
   border-radius: 4px;
 }
 
-@media screen and (min-width: 480px) and (max-width: 1199px) {
+@media screen and (max-width: 1199px) {
   .footer__logo {
     margin-left: auto;
     margin-right: auto;
@@ -919,7 +919,7 @@ body.modal-open {
 /*иконки*/
 .features__icon {
   margin-bottom: 30px;
-  height: 120px;
+  max-height: 120px;
   background-color: #f5f4fa;
   /*мобильный*/
   /*планшет*/
@@ -929,7 +929,7 @@ body.modal-open {
 @media screen and (max-width: 767px) {
   .features__icon {
     padding: 25px 190px;
-    width: 450px;
+    max-width: 450px;
   }
 }
 
@@ -1596,7 +1596,7 @@ body.modal-open {
   /*ноут*/
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (max-width: 767px) {
   .footer {
     min-height: 603px;
   }
@@ -1625,7 +1625,7 @@ body.modal-open {
   /*мобильный+планшет*/
 }
 
-@media screen and (min-width: 480px) and (max-width: 1199px) {
+@media screen and (max-width: 1199px) {
   .footer__title {
     margin-left: auto;
     margin-right: auto;
@@ -1643,7 +1643,7 @@ body.modal-open {
   /*ноут*/
 }
 
-@media screen and (min-width: 480px) and (max-width: 767px) {
+@media screen and (max-width: 767px) {
   .flex-footer {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1721,7 +1721,7 @@ body.modal-open {
   /*ноут*/
 }
 
-@media screen and (min-width: 480px) and (max-width: 767px) {
+@media screen and (max-width: 767px) {
   .footer-address {
     margin-bottom: 60px;
   }
@@ -1750,7 +1750,7 @@ body.modal-open {
   /*ноут*/
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (max-width: 767px) {
   .footer-address__text {
     margin-bottom: 8px;
     text-align: center;
@@ -1774,7 +1774,7 @@ body.modal-open {
   /*ноут*/
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (max-width: 767px) {
   .footer-address__item:not(:last-child) {
     margin-bottom: 8px;
   }
@@ -1821,7 +1821,7 @@ body.modal-open {
   /*ноут*/
 }
 
-@media screen and (min-width: 480px) and (max-width: 767px) {
+@media screen and (max-width: 767px) {
   .footer-social {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1878,7 +1878,7 @@ body.modal-open {
   /*ноут*/
 }
 
-@media screen and (min-width: 480px) and (max-width: 767px) {
+@media screen and (max-width: 767px) {
   .footer-sign {
     margin-bottom: 60px;
   }
@@ -1934,7 +1934,7 @@ body.modal-open {
   /*ноут*/
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (max-width: 1199px) {
   .footer-form__input {
     margin-bottom: 20px;
     width: 450px;
@@ -1967,7 +1967,7 @@ body.modal-open {
   /*мобильный*/
 }
 
-@media screen and (min-width: 480px) and (max-width: 1199px) {
+@media screen and (max-width: 1199px) {
   .footer__button {
     margin-left: auto;
     margin-right: auto;
