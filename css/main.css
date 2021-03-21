@@ -318,6 +318,11 @@ body {
   font-family: Roboto, sans-serif;
 }
 
+/*когда открыта модалка - не дает скроллить контект на фоне*/
+body.modal-open {
+  overflow: hidden;
+}
+
 /*контейнер*/
 .container {
   padding-left: 15px;
@@ -733,6 +738,15 @@ body {
     min-height: 400px;
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("./../images/hero-mobile.jpg");
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("./../images/hero-mobile.jpg");
+    /* Переопределяем путь к 2x изображению
+   если плотность экрана как минимум 2 */
+  }
+}
+
+@media screen and (max-width: 767px) and (min-device-pixel-ratio: 2), screen and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), screen and (max-width: 767px) and (min-resolution: 192dpi), screen and (max-width: 767px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("./../images/hero-mobile-2x.jpg");
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("./../images/hero-mobile-2x.jpg");
   }
 }
 
@@ -742,6 +756,15 @@ body {
     min-height: 400px;
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("./../images/hero-tablet.jpg");
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("./../images/hero-tablet.jpg");
+    /* Переопределяем путь к 2x изображению
+    если плотность экрана как минимум 2 */
+  }
+}
+
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("./../images/hero-tablet-2x.jpg");
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("./../images/hero-tablet-2x.jpg");
   }
 }
 
@@ -749,8 +772,17 @@ body {
   .hero {
     max-width: 1600px;
     min-height: 600px;
-    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("./../images/hero-desctop.jpg");
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("./../images/hero-desctop.jpg");
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("./../images/hero-desktop.jpg");
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("./../images/hero-desktop.jpg");
+    /* Переопределяем путь к 2x изображению
+      если плотность экрана как минимум 2 */
+  }
+}
+
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("./../images/hero-desktop-2x.jpg");
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("./../images/hero-desktop-2x.jpg");
   }
 }
 
@@ -1226,10 +1258,30 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 101;
   background-color: rgba(0, 0, 0, 0.2);
   -webkit-transition: opacity 500ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: opacity 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  overflow-y: scroll;
+  /*мобильный*/
+  /*планшет+ноут*/
+}
+
+@media screen and (max-width: 767px) {
+  .backdrop {
+    padding-top: 93px;
+    padding-bottom: 94px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 101;
+  }
 }
 
 .backdrop.is-hidden {
@@ -1520,7 +1572,6 @@ body {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 40px;
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }

@@ -4,6 +4,11 @@ body {
   font-family: Roboto, sans-serif;
 }
 
+/*когда открыта модалка - не дает скроллить контект на фоне*/
+body.modal-open {
+  overflow: hidden;
+}
+
 /*контейнер*/
 .container {
   padding-left: 15px;

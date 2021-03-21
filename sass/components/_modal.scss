@@ -5,15 +5,29 @@
   position: fixed;
   top: 0;
   left: 0;
-
   width: 100%;
   height: 100%;
-
-  z-index: 101;
 
   background-color: rgba(0, 0, 0, 0.2);
 
   transition: opacity 500ms $timing-fn;
+  overflow-y: scroll;
+
+  /*мобильный*/
+  @media screen and (max-width: 767px) {
+    padding-top: 93px;
+    padding-bottom: 94px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  /*планшет+ноут*/
+  @media screen and (min-width: $tablet) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 101;
+  }
 }
 
 .backdrop.is-hidden {
