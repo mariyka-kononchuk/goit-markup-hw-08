@@ -1041,12 +1041,12 @@ body.modal-open {
 /*члены команды*/
 /*сетка*/
 .team__item {
-  /*мобильный*/
-  /*планшет*/
-  /*ноут*/
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
+  /*мобильный*/
+  /*планшет*/
+  /*ноут*/
 }
 
 @media screen and (max-width: 767px) {
@@ -1069,6 +1069,32 @@ body.modal-open {
     -ms-flex-preferred-size: calc(100% / 4 - 30px);
         flex-basis: calc(100% / 4 - 30px);
   }
+}
+
+.team__thumb {
+  width: 100%;
+  height: 460px;
+  /*планшет*/
+  /*ноут*/
+}
+
+@media screen and (min-width: 768px) {
+  .team__thumb {
+    height: 374px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .team__thumb {
+    height: 260px;
+  }
+}
+
+.team__img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 /*обертка подписей и иконок соцсетей под фото*/
@@ -2258,16 +2284,14 @@ body.modal-open {
 .product__thumb {
   position: relative;
   overflow: hidden;
+  height: 294px;
 }
 
-.product__thumb img {
-  /*мобильный*/
-}
-
-@media screen and (min-width: 480px) {
-  .product__thumb img {
-    width: 100%;
-  }
+.product__img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 /*всплывающий текст при ховере*/
