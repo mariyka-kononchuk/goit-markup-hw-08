@@ -4,7 +4,7 @@ body {
   font-family: Roboto, sans-serif;
 }
 
-/*когда открыта модалка - не дает скроллить контект на фоне*/
+/*когда открыта модалка - не дает скроллить контент на фоне*/
 body.modal-open {
   overflow: hidden;
 }
@@ -15,6 +15,10 @@ body.modal-open {
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
+
+  @media screen and (min-width: 320px) {
+    width: 320px;
+  }
 
   @media screen and (min-width: $mobile) {
     width: $mobile;
