@@ -71,7 +71,7 @@
   padding-right: 40px;
   padding-bottom: 48px;
   padding-left: 40px;
-  z-index: 999;
+  z-index: 5;
 
   letter-spacing: 0.02em;
   background-color: $white-сolor;
@@ -113,8 +113,9 @@
 
 .menu-container .menu-toggle {
   position: absolute;
-  top: 8px;
-  right: 8px;
+  z-index: 111;
+  top: 10px;
+  right: 15px;
 
   cursor: pointer;
   fill: $primary-text-color;
@@ -123,13 +124,6 @@
   &:focus {
     fill: #188ce8;
   }
-}
-
-.menu-container .menu-toggle {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  color: #fff;
 }
 
 .mobile-menu {
@@ -194,7 +188,7 @@
   padding: 0;
 }
 
-.mobile-social__item {
+.mobile-social__item:not(:last-child) {
   margin-right: 20px;
   position: relative;
 }
