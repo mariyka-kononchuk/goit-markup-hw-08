@@ -54,6 +54,32 @@
 
 /*иконки*/
 .contacts-nav__icon {
-  margin-right: 10px;
+  margin-right: 8px;
   fill: currentColor;
+
+  /*планшет*/
+  @media screen and (min-width: $tablet) {
+    margin-right: 10px;
+  }
+}
+
+.contacts-nav__icon--envelope {
+  width: 14px;
+  height: 10px;
+
+  /*ноут*/
+  @media screen and (min-width: $desctop) {
+    width: 16px;
+    height: 12px;
+  }
+}
+.contacts-nav__icon--mobile {
+  width: 10px;
+  height: 14px;
+
+  /*ноут*/
+  @media screen and (min-width: $desctop) {
+    width: 10px;
+    height: 16px;
+  }
 }
