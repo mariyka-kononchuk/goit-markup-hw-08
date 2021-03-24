@@ -2028,7 +2028,7 @@ body.modal-open {
   /*ноут*/
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (max-width: 767px) {
   .filters-list {
     -webkit-box-pack: left;
         -ms-flex-pack: left;
@@ -2052,7 +2052,7 @@ body.modal-open {
   }
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (max-width: 767px) {
   .filters-list__item {
     margin-bottom: 15px;
   }
