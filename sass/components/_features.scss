@@ -47,11 +47,13 @@
 .features__icon {
   margin-bottom: #{$card-set-gap};
   max-height: 120px;
+  padding: 25px 110px;
+  max-width: 350px;
 
   background-color: $portfolio-button-background;
 
   /*мобильный*/
-  @media screen and (max-width: 767px) {
+  @media screen and (min-width: $mobile) {
     padding: 25px 190px;
     max-width: 450px;
   }

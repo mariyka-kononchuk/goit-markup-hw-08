@@ -1,6 +1,8 @@
 /*---ШАПКА---*/
 .page-header {
   position: relative;
+  display: flex;
+  align-items: center;
 
   width: 100%;
   min-height: 60px;
@@ -12,12 +14,6 @@
   font-size: 14px;
   line-height: 1.14;
   font-weight: 500;
-
-  /*мобильный*/
-  @media screen and (min-width: $mobile) {
-    display: flex;
-    align-items: center;
-  }
 
   /*планшет*/
   @media screen and (min-width: $tablet) {
