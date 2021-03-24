@@ -12,6 +12,8 @@
   padding: 0;
   margin: 0;
 
+  line-height: 1.19;
+
   /*планшет и ноут*/
   @media screen and (min-width: $tablet) {
     display: flex;
@@ -19,8 +21,6 @@
     margin-top: calc(-1 * #{$card-set-gap});
     margin-left: calc(-1 * #{$card-set-gap});
   }
-
-  line-height: 1.19;
 }
 
 /*члены команды*/
@@ -31,6 +31,10 @@
   border-radius: 0px 0px 4px 4px;
 
   /*мобильный*/
+  @media screen and (min-width: 320px) and (max-width: 479px) {
+    flex-basis: calc(100% - #{$card-set-gap});
+  }
+
   &:not(:last-child) {
     @media screen and (max-width: 767px) {
       margin-bottom: $card-set-gap;
@@ -53,6 +57,11 @@
 .team__thumb {
   width: 100%;
   height: 460px;
+
+  /*мобильный
+  @media screen and (min-width: 320px) and (max-width: 479px) {
+    width: 100vw;
+  }*/
 
   /*планшет*/
   @media screen and (min-width: $tablet) {
